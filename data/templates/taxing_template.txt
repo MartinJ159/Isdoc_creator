@@ -1,0 +1,15 @@
+		<TaxSubTotal>
+			<TaxableAmount>{%TAXABLEAMOUNT%}</TaxableAmount>
+			<TaxAmount>{%TAXAMOUNT%}</TaxAmount>
+			<TaxInclusiveAmount>{%TAXINCLUSIVEAMOUNT%}</TaxInclusiveAmount>
+			<AlreadyClaimedTaxableAmount>{%ALREADYCLAIMEDTAXABLEAMOUNT%}</AlreadyClaimedTaxableAmount>
+			<AlreadyClaimedTaxAmount>{%ALREADYCLAIMEDTAXAMOUNT%}</AlreadyClaimedTaxAmount>
+			<AlreadyClaimedTaxInclusiveAmount>{%ALREADYCLAIMEDTAXINCLUSIVEAMOUNT%}</AlreadyClaimedTaxInclusiveAmount>
+			<DifferenceTaxableAmount>{%DIFFTAXABLEAMOUNT%}</DifferenceTaxableAmount>
+			<DifferenceTaxAmount>{%DIFFTAXAMOUNT%}</DifferenceTaxAmount>
+			<DifferenceTaxInclusiveAmount>{%DIFFTAXINCLUSIVEAMOUNT%}</DifferenceTaxInclusiveAmount>
+			<TaxCategory>
+				<Percent>{%TAXPERCENT%}</Percent>
+				<TaxScheme></TaxScheme>
+			</TaxCategory>
+		</TaxSubTotal>

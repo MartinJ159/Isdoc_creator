@@ -1,0 +1,30 @@
+	</TaxTotal>
+	<LegalMonetaryTotal>
+		<TaxExclusiveAmount>{%TOTALWITHOUTTAX%} </TaxExclusiveAmount>
+		<TaxInclusiveAmount>{%AMOUNTPAID%}</TaxInclusiveAmount>
+		<AlreadyClaimedTaxExclusiveAmount>{%ALREADYPAIDWITHOUTTAX%}</AlreadyClaimedTaxExclusiveAmount>
+		<AlreadyClaimedTaxInclusiveAmount>{%ALREADYPAIDWITHTAX%}</AlreadyClaimedTaxInclusiveAmount>
+		<DifferenceTaxExclusiveAmount>{%TOTALWITHOUTTAX%}</DifferenceTaxExclusiveAmount>
+		<DifferenceTaxInclusiveAmount>{%AMOUNTPAID%}</DifferenceTaxInclusiveAmount>
+		<PayableRoundingAmount>{%AMOUNTROUNDING%}</PayableRoundingAmount>
+		<PaidDepositsAmount>{%PAIDDEPOSITAMOUNT%}</PaidDepositsAmount>
+		<PayableAmount>{%AMOUNTPAID%}</PayableAmount>
+	</LegalMonetaryTotal>
+	<PaymentMeans>
+		<Payment>
+			<PaidAmount>{%AMOUNTDUE%}</PaidAmount>
+			<PaymentMeansCode>{%TERMS%}</PaymentMeansCode>
+			<Details>
+				<PaymentDueDate>{%DUEDATE%}</PaymentDueDate>
+				<ID>{%ACCOUNTNUMBER%}</ID>
+				<BankCode>{%BANKCODE%}</BankCode>
+				<Name>{%BANKNAME%}</Name>
+				<IBAN>{%IBAN%}</IBAN>
+				<BIC>{%BICSWIFT%}</BIC>
+				<VariableSymbol>{%PAYMENTREFERENCE%}</VariableSymbol>
+				<ConstantSymbol>{%CONSTSYM%}</ConstantSymbol>
+			</Details>
+		</Payment>
+	</PaymentMeans>
+</Invoice>
+

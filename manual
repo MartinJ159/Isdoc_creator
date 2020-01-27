@@ -1,0 +1,77 @@
+opening
+
+ID = {%ID%} = invoice_id
+UUID = {%UUID%} = // kde to vezmu?
+ISSUEDATE = {%ISSUEDATE%} = date_issue
+Tax point date = {%TAXDATE%} = date_uzp
+VatApply = {%VATAPPLY&} = true // vzdy??
+LocalCurrencyCode = {%LOCALCURRCODE%} = currency
+ForeignCurrencyCode = {%FOREIGNCURRCODE%} = // co tu?
+CurrRate = {%CURRCODE%} = 1?
+RefCurrRate = {%REFCURRRATE%} = 1? 
+Vendor IC = {%SENDERIC%} = sender_ic
+Vendor name = {%SENDERNAME%} = sender_name
+VendorStreetName = {%VENDORSTREETNAME%} = // vytvorit ze sender_adress
+VendorBuildingNumber = {&VENDORBUILDINGNUMBER%} = // vytvorit ze sender_adress
+VendorCityName = {%VENDORCITYNAME%} = // vytvorit ze sender_adress
+VendorPostalZone = {%VENDORPOSTALZONE%} = // vytvorit ze sender_adress
+VendorCountryID = {%VENDORCOUNTRYID%} = // vytvorit ze sender_adress
+VendorCountryName = {%VENDORCOUNTRYNAME%} = // vytvorit ze sender_adress
+VendorDIC = {%SENDERDIC%} = sender_dic
+VendorTaxScheme = {%VENDORTAXSCHEME%} = // nic?
+Recipient IC = {%RECIPIENTIC%} = recipient_ic
+Recipient IC = {%RECIPIENTDIC%} = recipient_dic
+Customer name = {%RECIPIENTNAME%} = recipient_name
+CustomerStreetName = {%RECIPIENTSTREETNAME%} = // vytvorit z recipient_adress
+CustomerBuildingNumber = {&RECIPIENTBUILDINGNUMBER%} = // vytvorit z recipient_adress
+CustomerCityName = {%RECIPIENTCITYNAME%} = // vytvorit z recipient_adress
+CustomerPostalZone = {%RECIPIENTPOSTALZONE%} = // vytvorit z recipient_adress
+CustomerCountryID = {%RECIPIENCOUNTRYID%} = // vytvorit z recipient_adress
+CustomerCountryName = {%VRECIPIENCOUNTRYNAME%} = // vytvorit z recipient_adress
+CustomerTaxScheme = {%RECIPIENTTAXSCHEME%} = // nic?
+Order number = {%ORDERID%} = order_id
+externalorderID = {%ORDERNUMBER%} = order_id
+
+items
+InvoiceID = {%ID%} = // nic?
+UOM = {%UOM%} = // unit code kde vezmu?
+Quantity = {%QUANTITY%} = item_quantity
+Total base = {%TOTALBASE%} = // Quantity * item_net_unit_price?
+Total amount = {%TOTALAMOUNT%} = // Quantity * item_unit_price
+VAT = {%VAT%} = // TOTAL AMOUNT - TOTAL BASE?
+price without VAT = {%PRICEWITHOUTVAT%} = item_net_unit_price
+Unit price = {%UNITPRICE%} = item_unit_price
+VAT rate = {%VATRATE%} = item_vat_rate
+VATCalcMethod = {%VATCALCMETHOD%} = 0?
+Description = {%DESC%} = item_desc
+SellerItemID = {%SELLERITEMID%} = // nic?
+
+taxes
+TaxableAmount = {%TAXABLEAMOUNT%} = vat_detail_base
+TaxAmount = {%TAXAMOUNT%} = vat_detail_tax
+TaxInlcusiveAmount = {%TAXINCLUSIVEAMOUNT%} = // vat_detail_base + vat_detail_tax?
+AlreadyClaimedTaxableAmount = {%ALREADYCLAIMEDTAXABLEAMOUNT%} = 0?
+AlreadyClaimedTaxAmount = {%ALREADYCLAIMEDTAXAMOUNT%} = 0?
+AlreadyClaimedTaxInclusiveAmount = {%ALREADYCLAIMEDTAXINCLUSIVEAMOUNT%} = 0?
+DiffTaxableAmount = {%DIFFTAXABLEAMOUNT%} = vat_detail_base
+DiffTaxAmount = {%DIFFTAXAMOUNT%} = vat_detail_tax
+DiffTaxInclusiveAmount = {%DIFFTAXINCLUSIVEAMOUNT%} = // vat_detail_base + vat_detail_tax?
+TaxPercent = {%TAXPERCENT%} = vat_detail_rate
+
+closing
+Total without tax = {%TOTALWITHOUTTAX%} = amount_total_base
+Amount Paid = {%AMOUNTPAID%} = 0?
+AlreadyPaidWithoutTax = {%ALREADYPAIDWITHOUTTAX%} = 0?
+AlreadyPaidWithTax = {%ALREADYPAIDWITHTAX%} = 0?
+PaidDepositAmount = {%PAIDDEPOSITAMOUNT%} = 0?
+Amount Rounding = {%AMOUNTROUNDING%} = // amount_total - amount_total_base - amount_total_tax??
+Amount due = {%AMOUNTDUE%} = amount_total
+Terms = {%TERMS%} = // co tu?
+Due date = {%DUEDATE%} = date_due
+Account number = {%ACCOUNTNUMBER%} = account_num
+Bank code = {%BANKCODE%} = bank_num
+BankName = {%BANKNAME%} = //??
+IBAN = {%IBAN%} = iban
+BIC/SWIFT = {%BICSWIFT%} = bic
+Payment reference {%PAYMENTREFERENCE%} = var_sym
+Constant symbol = {%CONSTSYM%} = const_sym

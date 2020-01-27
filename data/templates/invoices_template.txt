@@ -1,0 +1,20 @@
+		<InvoiceLine>
+			<ID>{%ID%}</ID>
+			<InvoicedQuantity unitCode="{%UOM%}">{%QUANTITY%}</InvoicedQuantity>
+			<LineExtensionAmount>{%TOTALBASE%}</LineExtensionAmount>
+			<LineExtensionAmountTaxInclusive>{%TOTALAMOUNT%}</LineExtensionAmountTaxInclusive>
+			<LineExtensionTaxAmount>{%VAT%}</LineExtensionTaxAmount>
+			<UnitPrice>{%PRICEWITHOUTVAT%}</UnitPrice>
+			<UnitPriceTaxInclusive>{%UNITPRICE%}</UnitPriceTaxInclusive>
+			<ClassifiedTaxCategory>
+				<Percent>{%VATRATE%}</Percent>
+				<VATCalculationMethod>{%VATCALCMETHOD%}</VATCalculationMethod>
+			</ClassifiedTaxCategory>
+			<Item>
+				<Description>{%DESC%}</Description>
+				<SellersItemIdentification>
+					<ID>{%SELLERITEMID%}</ID>
+				</SellersItemIdentification>
+			</Item>
+		</InvoiceLine>
+		

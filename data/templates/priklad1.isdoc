@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Formát Faktury ISDOC --> 
+<Invoice xmlns="http://isdoc.cz/namespace/2013" version="6.0.1">
+  <!--číslo verze ISDOC -->
+
+  <DocumentType>1</DocumentType>
+  <!--Typ dokumentu, z násl.číselníku-->
+  <!-- 1: A Faktura vodné
+ 
+  -->
+  
+  <ID>120185340</ID>
+  <!--ID, lidsky čitelné číslo dokladu-->
+  <UUID>{%ID%}</UUID>
+  <!--GUID, identifikace od emitujícího systému-->
+  <IssueDate>{%ISSUEDATE%}</IssueDate>
+  <!--Datum vystavení­-->
+  <TaxPointDate>2018-06-30</TaxPointDate>
+  <!--Datum plnění DPH-->
+  <VATApplicable>true</VATApplicable>
+  <!--Podléhá DPH-->
+  <ElectronicPossibilityAgreementReference>ABC123/90007/2012</ElectronicPossibilityAgreementReference>
+  <!--Označení dokumentu, kterým dal příjemce vystaviteli souhlas s elektronickou formou faktury-->
+
+  
+  <Note>Nepovinná poznámka k dokladu</Note>
+
+
+  <LocalCurrencyCode>CZK</LocalCurrencyCode>
+  <!--Lokální měna dokladu, vždy povinná položka-->
+
+
+  <CurrRate>1</CurrRate>
+  <!--kurz cizí měny, pokud je použita, jinak 1-->
+  <RefCurrRate>1</RefCurrRate>
+  <!--vztažný kurz cizí měny, většinou 1-->
+ 
+  
+
+  <AccountingSupplierParty>
+    <!--Dodavatel, účetní jednotka-->
+    <Party>
+      <PartyIdentification>
+        <UserID>1426</UserID>
+        <!--Uživatelské číslo firmy/provozovny-->
+        <ID>{%SENDERIC%}</ID>
+        <!--IČO firmy-->
+      </PartyIdentification>
+      <PartyName>
+        <Name>{%SENDERNAME%}</Name>
+      </PartyName>
+      <PostalAddress>
+        <StreetName></StreetName>
+        <BuildingNumber></BuildingNumber>
+        <CityName></CityName>
+        <PostalZone></PostalZone>
+      	<Country>
+      	  <IdentificationCode></IdentificationCode>
+      	  <Name></Name>
+      	</Country>        
+      </PostalAddress>
+      <PartyTaxScheme>
+        <CompanyID>{%SENDERDIC%}</CompanyID>
+        <TaxScheme>VAT</TaxScheme>
+      </PartyTaxScheme>
+    </Party>
+  </AccountingSupplierParty>
+
+
+
+  <AccountingCustomerParty>
+    <!--Příjemce, účetní jednotka-->
+    <Party>
+      <PartyIdentification>
+        <UserID>000001</UserID>
+        <CatalogFirmIdentification>0</CatalogFirmIdentification>
+        <ID>{%RECIPIENTIC%}</ID>
+      </PartyIdentification>
+      <PartyName>
+        <Name>{%RECIPIENTNAME%}</Name>
+      </PartyName>
+      <PostalAddress>
+        <StreetName> tř. Václava Klementa</StreetName>
+        <BuildingNumber>869</BuildingNumber>
+        <CityName>Mladá Boleslav 2</CityName>
+        <PostalZone>29301</PostalZone>
+        <Country>
+          <IdentificationCode>CZ</IdentificationCode>
+          <Name>Česká republika</Name>
+        </Country>
+      </PostalAddress>
+      <PartyTaxScheme>
+        <CompanyID>CZ61675938</CompanyID>
+        <TaxScheme>VAT</TaxScheme>
+      </PartyTaxScheme>
+      <Contact>
+        <Name>Jan Horák</Name>
+        <Telephone>987654321</Telephone>
+        <ElectronicMail>jan.horak@sko-energo.cz</ElectronicMail>
+      </Contact>
+    </Party>
+  </AccountingCustomerParty>
+
+
+
+
+  <InvoiceLines>
+    <!--Kolekce jednotlivých řádků faktury-->
+    <InvoiceLine>
+      <!--Řádek faktury-->
+      <ID>0</ID>
+      <!--Pořadové číslo řádku faktury-->
+      <InvoicedQuantity unitCode="Ks">0</InvoicedQuantity>
+      <!--počet jednotek-->
+      <LineExtensionAmount>0</LineExtensionAmount>
+      <!--celk.cena bez daně na ř. v T.M.-->
+      <LineExtensionAmountTaxInclusive>0</LineExtensionAmountTaxInclusive>
+      <LineExtensionTaxAmount>0</LineExtensionTaxAmount>
+      <!--částka daně na ř. (v T.M.)-->
+      <UnitPrice>0</UnitPrice>
+      <!--jedn.cena bez daně na ř. v T.M.-->
+      <UnitPriceTaxInclusive>0</UnitPriceTaxInclusive>
+      <!--jedn.cena s daní na ř. v T.M.-->
+      <ClassifiedTaxCategory>
+        <Percent>0</Percent>
+        <!--% DPH, nezávislé na položce Item-->
+        <VATCalculationMethod>0</VATCalculationMethod>
+        <!--Způsob výpočtu DPH, 0-zdola, 1-shora-->
+      </ClassifiedTaxCategory>
+    </InvoiceLine>
+  </InvoiceLines>
+
+
+
+
+  <TaxTotal>
+    <!--daňová rekapitulace: sumář po sazbách a pak celková daň-->
+    <TaxSubTotal>
+      <!--sumář jedné sazby-->
+      <TaxableAmount>244205.40</TaxableAmount>
+      <!--částka s daní v sazbě v T.M.-->
+      <TaxAmount>36630.81</TaxAmount>
+      <!--základ v sazbě v T.M.-->
+      <TaxInclusiveAmount>280836.00</TaxInclusiveAmount>
+      <!--daň v sazbě v T.M.-->
+      <AlreadyClaimedTaxableAmount>0</AlreadyClaimedTaxableAmount>
+      <!--na záloze již uplatněno, základ v sazbě v T.M.-->
+      <AlreadyClaimedTaxAmount>0</AlreadyClaimedTaxAmount>
+      <!--na záloze již uplatněno, daň v sazbě v T.M.-->
+      <AlreadyClaimedTaxInclusiveAmount>0</AlreadyClaimedTaxInclusiveAmount>
+      <!--na záloze již upl., s daní v sazbě v T.M.-->
+      <DifferenceTaxableAmount>0</DifferenceTaxableAmount>
+      <!--diff, zákl T.M.-->
+      <DifferenceTaxAmount>0</DifferenceTaxAmount>
+      <!--diff, daň  T.M.-->
+      <DifferenceTaxInclusiveAmount>0</DifferenceTaxInclusiveAmount>
+      <!--diff, sdaní T.M.-->
+      <TaxCategory>
+        <Percent>21</Percent>
+        <!--% daně-->
+      </TaxCategory>
+    </TaxSubTotal>
+    <TaxAmount>0</TaxAmount>
+    <!--celková daň v T.M. po odečtení odúčtovaných záloh-->
+  </TaxTotal>
+
+
+
+  <LegalMonetaryTotal>
+    <!--celkové částky, vždy bez daně v tuzemské a cizí měně a s daní totéž-->
+    <TaxExclusiveAmount>244205.40</TaxExclusiveAmount>
+    <TaxInclusiveAmount>280836.00</TaxInclusiveAmount>
+    <AlreadyClaimedTaxExclusiveAmount>0</AlreadyClaimedTaxExclusiveAmount>
+    <!--sumy na z upl.-->
+    <AlreadyClaimedTaxInclusiveAmount>0</AlreadyClaimedTaxInclusiveAmount>
+    <DifferenceTaxExclusiveAmount>25.10</DifferenceTaxExclusiveAmount>
+    <!--celkové sumy - rozdílů-->
+    <DifferenceTaxInclusiveAmount>0</DifferenceTaxInclusiveAmount>
+    <PayableRoundingAmount>0</PayableRoundingAmount>
+    <!--zaokrouhl celk.částky v T.M.-->
+    <PaidDepositsAmount>0</PaidDepositsAmount>
+    <!--na nedaňové zál zaplaceno v T.M.-->
+    <PayableAmount>280836.00</PayableAmount>
+    <!--k zaplacení v T.M.-->
+  </LegalMonetaryTotal>
+
+
+
+  <PaymentMeans>
+    <!--Kolekce plateb. Je možno platit různě a na vícekrát, typicky u plateb na bank.účet-->
+    <!--podporujeme: 10-cash, 20-cheque, 42-Bankaccount, 48-Bankcard, 97-Clearing between partners-->
+    <!--sekce isd:Details obsahuje buď odkaz dokument svázaný s platbou nebo na náležitosti platby na BÚ-->
+
+    <Payment>
+      <!--Druhý příklad - bankou nadvakrát do různého data splatnosti-->
+      <PaidAmount>280836.00</PaidAmount>
+      <!--částka k zaplacení s přísl.měnou-->
+      <PaymentMeansCode>42</PaymentMeansCode>
+      <!--42 - bank.převodem-->
+      <Details>
+        <!--podrobnosti, u bankovního převodu povinné údaje o věřiteli a platbě-->
+        <PaymentDueDate>2018-07-23</PaymentDueDate>
+        <!--Datum splatnosti-->
+        <ID>1609571</ID>
+        <!--číslo účtu lokální banky-->
+        <BankCode>0100</BankCode>
+        <!--kód lokální banky-->
+        <Name></Name>
+        <!--název lokální banky-->
+        <IBAN></IBAN>
+        <!--mezinárodní číslo účtu IBAN-->
+        <BIC></BIC>
+        <!--ISO 9362 BIC kód banky, tzv.Swift kód 8 nebo 11 znaků-->
+        <VariableSymbol></VariableSymbol>
+        <!--VS-->
+        <ConstantSymbol></ConstantSymbol>
+        <!--KS nebo tzv.platební titul - pro zahr. platby dle ČNB-->
+        <SpecificSymbol></SpecificSymbol>
+        <!--SS-->
+      </Details>
+    </Payment>
+  </PaymentMeans>
+
+
+  
+  <SupplementsList>
+    <!--Nepovinná kolekce příloh daného dokladu, jeden z nich může být dodaný náhled (atribut preview="true")-->
+    <Supplement preview="true">
+      <Filename>A Faktura vodné.pdf</Filename>
+      <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+      <DigestValue>hDcHV8mAaNkRAF/AHBjE+JjpbIQ=</DigestValue>
+    </Supplement>
+  </SupplementsList>
+</Invoice>

@@ -1,0 +1,334 @@
+<Invoice version="6.0.1" xmlns="http://isdoc.cz/namespace/2013">
+	<DocumentType>1</DocumentType>
+	<ID><RPA_Invoice number></ID>
+	<UUID><RPA_UUID></UUID>
+	<IssueDate><RPA_Issue date></IssueDate>
+	<TaxPointDate><RPA_Tax point date></TaxPointDate>
+	<VATApplicable><RPA_VATApply></VATApplicable>
+	<ElectronicPossibilityAgreementReference></ElectronicPossibilityAgreementReference>
+	<LocalCurrencyCode><RPA_LocalCurrencyCode></LocalCurrencyCode>
+	<ForeignCurrencyCode><RPA_ForeignCurrencyCode></ForeignCurrencyCode>
+	<CurrRate><RPA_CurrRate></CurrRate>
+	<RefCurrRate><RPA_RefCurrRate></RefCurrRate>
+	<AccountingSupplierParty>
+		<Party>
+			<PartyIdentification>
+				<ID><RPA_Vendor company ID></ID>
+			</PartyIdentification>
+			<PartyName>
+				<Name><RPA_Vendor name></Name>
+			</PartyName>
+			<PostalAddress>
+				<StreetName><RPA_VendorStreetName></StreetName>
+				<BuildingNumber><RPA_VendorBuildingNumber></BuildingNumber>
+				<CityName><RPA_VendorCityName></CityName>
+				<PostalZone><RPA_VendorPostalZone></PostalZone>
+				<Country>
+					<IdentificationCode><RPA_VendorCountryID></IdentificationCode>
+					<Name><RPA_VendorCountryName></Name>
+				</Country>
+			</PostalAddress>
+			<PartyTaxScheme>
+				<CompanyID><RPA_Vendor VAT number></CompanyID>
+				<TaxScheme><RPA_VendorTaxScheme></TaxScheme>
+			</PartyTaxScheme>
+		</Party>
+	</AccountingSupplierParty>
+	<AccountingCustomerParty>
+		<Party>
+			<PartyIdentification>
+				<ID><RPA_Customer company ID></ID>
+			</PartyIdentification>
+			<PartyName>
+				<Name><RPA_Customer name></Name>
+			</PartyName>
+			<PostalAddress>
+				<StreetName><RPA_CustomerStreetName></StreetName>
+				<BuildingNumber><RPA_CustomerBuildingNumber></BuildingNumber>
+				<CityName><RPA_CustomerCityName></CityName>
+				<PostalZone><RPA_CustomerPostalZone></PostalZone>
+				<Country>
+					<IdentificationCode><RPA_CustomerCountryID></IdentificationCode>
+					<Name><RPA_CustomerCountryName></Name>
+				</Country>
+			</PostalAddress>
+			<PartyTaxScheme>
+				<CompanyID><RPA_Customer VAT number></CompanyID>
+				<TaxScheme><RPA_CustomerTaxScheme></TaxScheme>
+			</PartyTaxScheme>
+		</Party>
+	</AccountingCustomerParty>
+	<OrderReferences>
+		<OrderReference>
+			<SalesOrderID><RPA_Order number></SalesOrderID>
+			<ExternalOrderID><RPA_Order number></ExternalOrderID>
+		</OrderReference>
+	</OrderReferences>
+	<InvoiceLines>
+			<InvoiceLine>
+			<ID><RPA_InvoiceID></ID>
+			<InvoicedQuantity unitCode="<RPA_UOM>"><RPA_Quantity></InvoicedQuantity>
+			<LineExtensionAmount><RPA_Total base></LineExtensionAmount>
+			<LineExtensionAmountTaxInclusive><RPA_Total amount></LineExtensionAmountTaxInclusive>
+			<LineExtensionTaxAmount><RPA_VAT></LineExtensionTaxAmount>
+			<UnitPrice><RPA_Unit price without VAT></UnitPrice>
+			<UnitPriceTaxInclusive><RPA_Unit price></UnitPriceTaxInclusive>
+			<ClassifiedTaxCategory>
+				<Percent><RPA_VAT rate></Percent>
+				<VATCalculationMethod><RPA_VATCalcMethod></VATCalculationMethod>
+			</ClassifiedTaxCategory>
+			<Item>
+				<Description><RPA_Description></Description>
+				<SellersItemIdentification>
+					<ID><RPA_SellerItemID></ID>
+				</SellersItemIdentification>
+			</Item>
+		</InvoiceLine>
+				<InvoiceLine>
+			<ID><RPA_InvoiceID></ID>
+			<InvoicedQuantity unitCode="<RPA_UOM>"><RPA_Quantity></InvoicedQuantity>
+			<LineExtensionAmount><RPA_Total base></LineExtensionAmount>
+			<LineExtensionAmountTaxInclusive><RPA_Total amount></LineExtensionAmountTaxInclusive>
+			<LineExtensionTaxAmount><RPA_VAT></LineExtensionTaxAmount>
+			<UnitPrice><RPA_Unit price without VAT></UnitPrice>
+			<UnitPriceTaxInclusive><RPA_Unit price></UnitPriceTaxInclusive>
+			<ClassifiedTaxCategory>
+				<Percent><RPA_VAT rate></Percent>
+				<VATCalculationMethod><RPA_VATCalcMethod></VATCalculationMethod>
+			</ClassifiedTaxCategory>
+			<Item>
+				<Description><RPA_Description></Description>
+				<SellersItemIdentification>
+					<ID><RPA_SellerItemID></ID>
+				</SellersItemIdentification>
+			</Item>
+		</InvoiceLine>
+			</InvoiceLines>
+	<TaxTotal>
+		<TaxSubTotal>
+			<TaxableAmount><RPA_TaxableAmount></TaxableAmount>
+			<TaxAmount><RPA_TaxAmount></TaxAmount>
+			<TaxInclusiveAmount><RPA_TaxInlcusiveAmount></TaxInclusiveAmount>
+			<AlreadyClaimedTaxableAmount><RPA_AlreadyClaimedTaxableAmount></AlreadyClaimedTaxableAmount>
+			<AlreadyClaimedTaxAmount><RPA_AlreadyClaimedTaxAmount></AlreadyClaimedTaxAmount>
+			<AlreadyClaimedTaxInclusiveAmount><RPA_AlreadyClaimedTaxInlcusiveAmount></AlreadyClaimedTaxInclusiveAmount>
+			<DifferenceTaxableAmount><RPA_DiffTaxableAmount></DifferenceTaxableAmount>
+			<DifferenceTaxAmount><RPA_DiffTaxAmount></DifferenceTaxAmount>
+			<DifferenceTaxInclusiveAmount><RPA_DiffTaxInlcusiveAmount></DifferenceTaxInclusiveAmount>
+			<TaxCategory>
+				<Percent><RPA_TaxPercent></Percent>
+				<TaxScheme></TaxScheme>
+			</TaxCategory>
+		</TaxSubTotal>
+				<TaxSubTotal>
+			<TaxableAmount><RPA_TaxableAmount></TaxableAmount>
+			<TaxAmount><RPA_TaxAmount></TaxAmount>
+			<TaxInclusiveAmount><RPA_TaxInlcusiveAmount></TaxInclusiveAmount>
+			<AlreadyClaimedTaxableAmount><RPA_AlreadyClaimedTaxableAmount></AlreadyClaimedTaxableAmount>
+			<AlreadyClaimedTaxAmount><RPA_AlreadyClaimedTaxAmount></AlreadyClaimedTaxAmount>
+			<AlreadyClaimedTaxInclusiveAmount><RPA_AlreadyClaimedTaxInlcusiveAmount></AlreadyClaimedTaxInclusiveAmount>
+			<DifferenceTaxableAmount><RPA_DiffTaxableAmount></DifferenceTaxableAmount>
+			<DifferenceTaxAmount><RPA_DiffTaxAmount></DifferenceTaxAmount>
+			<DifferenceTaxInclusiveAmount><RPA_DiffTaxInlcusiveAmount></DifferenceTaxInclusiveAmount>
+			<TaxCategory>
+				<Percent><RPA_TaxPercent></Percent>
+				<TaxScheme></TaxScheme>
+			</TaxCategory>
+		</TaxSubTotal>
+			</TaxTotal>
+	<LegalMonetaryTotal>
+		<TaxExclusiveAmount><RPA_Total without tax></TaxExclusiveAmount>
+		<TaxInclusiveAmount><RPA_Amount Paid></TaxInclusiveAmount>
+		<AlreadyClaimedTaxExclusiveAmount><RPA_AlreadyPaidWithoutTax></AlreadyClaimedTaxExclusiveAmount>
+		<AlreadyClaimedTaxInclusiveAmount><RPA_AlreadyPaidWithTax></AlreadyClaimedTaxInclusiveAmount>
+		<DifferenceTaxExclusiveAmount><RPA_Total without tax></DifferenceTaxExclusiveAmount>
+		<DifferenceTaxInclusiveAmount><RPA_Amount Paid></DifferenceTaxInclusiveAmount>
+		<PayableRoundingAmount><RPA_Amount Rounding></PayableRoundingAmount>
+		<PaidDepositsAmount><RPA_PaidDepositAmount></PaidDepositsAmount>
+		<PayableAmount><RPA_Amount Paid></PayableAmount>
+	</LegalMonetaryTotal>
+	<PaymentMeans>
+		<Payment>
+			<PaidAmount><RPA_Amount due></PaidAmount>
+			<PaymentMeansCode><RPA_Terms></PaymentMeansCode>
+			<Details>
+				<PaymentDueDate><RPA_Due date></PaymentDueDate>
+				<ID><RPA_Account number></ID>
+				<BankCode><RPA_Bank code></BankCode>
+				<Name><RPA_BankName></Name>
+				<IBAN><RPA_IBAN></IBAN>
+				<BIC><RPA_BIC/SWIFT></BIC>
+				<VariableSymbol><RPA_Payment reference></VariableSymbol>
+				<ConstantSymbol><RPA_Constant symbol></ConstantSymbol>
+			</Details>
+		</Payment>
+	</PaymentMeans>
+</Invoice>
+
+<Invoice version="6.0.1" xmlns="http://isdoc.cz/namespace/2013">
+	<DocumentType>1</DocumentType>
+	<ID><RPA_Invoice number></ID>
+	<UUID><RPA_UUID></UUID>
+	<IssueDate><RPA_Issue date></IssueDate>
+	<TaxPointDate><RPA_Tax point date></TaxPointDate>
+	<VATApplicable><RPA_VATApply></VATApplicable>
+	<ElectronicPossibilityAgreementReference></ElectronicPossibilityAgreementReference>
+	<LocalCurrencyCode><RPA_LocalCurrencyCode></LocalCurrencyCode>
+	<ForeignCurrencyCode><RPA_ForeignCurrencyCode></ForeignCurrencyCode>
+	<CurrRate><RPA_CurrRate></CurrRate>
+	<RefCurrRate><RPA_RefCurrRate></RefCurrRate>
+	<AccountingSupplierParty>
+		<Party>
+			<PartyIdentification>
+				<ID><RPA_Vendor company ID></ID>
+			</PartyIdentification>
+			<PartyName>
+				<Name><RPA_Vendor name></Name>
+			</PartyName>
+			<PostalAddress>
+				<StreetName><RPA_VendorStreetName></StreetName>
+				<BuildingNumber><RPA_VendorBuildingNumber></BuildingNumber>
+				<CityName><RPA_VendorCityName></CityName>
+				<PostalZone><RPA_VendorPostalZone></PostalZone>
+				<Country>
+					<IdentificationCode><RPA_VendorCountryID></IdentificationCode>
+					<Name><RPA_VendorCountryName></Name>
+				</Country>
+			</PostalAddress>
+			<PartyTaxScheme>
+				<CompanyID><RPA_Vendor VAT number></CompanyID>
+				<TaxScheme><RPA_VendorTaxScheme></TaxScheme>
+			</PartyTaxScheme>
+		</Party>
+	</AccountingSupplierParty>
+	<AccountingCustomerParty>
+		<Party>
+			<PartyIdentification>
+				<ID><RPA_Customer company ID></ID>
+			</PartyIdentification>
+			<PartyName>
+				<Name><RPA_Customer name></Name>
+			</PartyName>
+			<PostalAddress>
+				<StreetName><RPA_CustomerStreetName></StreetName>
+				<BuildingNumber><RPA_CustomerBuildingNumber></BuildingNumber>
+				<CityName><RPA_CustomerCityName></CityName>
+				<PostalZone><RPA_CustomerPostalZone></PostalZone>
+				<Country>
+					<IdentificationCode><RPA_CustomerCountryID></IdentificationCode>
+					<Name><RPA_CustomerCountryName></Name>
+				</Country>
+			</PostalAddress>
+			<PartyTaxScheme>
+				<CompanyID><RPA_Customer VAT number></CompanyID>
+				<TaxScheme><RPA_CustomerTaxScheme></TaxScheme>
+			</PartyTaxScheme>
+		</Party>
+	</AccountingCustomerParty>
+	<OrderReferences>
+		<OrderReference>
+			<SalesOrderID><RPA_Order number></SalesOrderID>
+			<ExternalOrderID><RPA_Order number></ExternalOrderID>
+		</OrderReference>
+	</OrderReferences>
+	<InvoiceLines>
+			<InvoiceLine>
+			<ID><RPA_InvoiceID></ID>
+			<InvoicedQuantity unitCode="<RPA_UOM>"><RPA_Quantity></InvoicedQuantity>
+			<LineExtensionAmount><RPA_Total base></LineExtensionAmount>
+			<LineExtensionAmountTaxInclusive><RPA_Total amount></LineExtensionAmountTaxInclusive>
+			<LineExtensionTaxAmount><RPA_VAT></LineExtensionTaxAmount>
+			<UnitPrice><RPA_Unit price without VAT></UnitPrice>
+			<UnitPriceTaxInclusive><RPA_Unit price></UnitPriceTaxInclusive>
+			<ClassifiedTaxCategory>
+				<Percent><RPA_VAT rate></Percent>
+				<VATCalculationMethod><RPA_VATCalcMethod></VATCalculationMethod>
+			</ClassifiedTaxCategory>
+			<Item>
+				<Description><RPA_Description></Description>
+				<SellersItemIdentification>
+					<ID><RPA_SellerItemID></ID>
+				</SellersItemIdentification>
+			</Item>
+		</InvoiceLine>
+				<InvoiceLine>
+			<ID><RPA_InvoiceID></ID>
+			<InvoicedQuantity unitCode="<RPA_UOM>"><RPA_Quantity></InvoicedQuantity>
+			<LineExtensionAmount><RPA_Total base></LineExtensionAmount>
+			<LineExtensionAmountTaxInclusive><RPA_Total amount></LineExtensionAmountTaxInclusive>
+			<LineExtensionTaxAmount><RPA_VAT></LineExtensionTaxAmount>
+			<UnitPrice><RPA_Unit price without VAT></UnitPrice>
+			<UnitPriceTaxInclusive><RPA_Unit price></UnitPriceTaxInclusive>
+			<ClassifiedTaxCategory>
+				<Percent><RPA_VAT rate></Percent>
+				<VATCalculationMethod><RPA_VATCalcMethod></VATCalculationMethod>
+			</ClassifiedTaxCategory>
+			<Item>
+				<Description><RPA_Description></Description>
+				<SellersItemIdentification>
+					<ID><RPA_SellerItemID></ID>
+				</SellersItemIdentification>
+			</Item>
+		</InvoiceLine>
+			</InvoiceLines>
+	<TaxTotal>
+		<TaxSubTotal>
+			<TaxableAmount><RPA_TaxableAmount></TaxableAmount>
+			<TaxAmount><RPA_TaxAmount></TaxAmount>
+			<TaxInclusiveAmount><RPA_TaxInlcusiveAmount></TaxInclusiveAmount>
+			<AlreadyClaimedTaxableAmount><RPA_AlreadyClaimedTaxableAmount></AlreadyClaimedTaxableAmount>
+			<AlreadyClaimedTaxAmount><RPA_AlreadyClaimedTaxAmount></AlreadyClaimedTaxAmount>
+			<AlreadyClaimedTaxInclusiveAmount><RPA_AlreadyClaimedTaxInlcusiveAmount></AlreadyClaimedTaxInclusiveAmount>
+			<DifferenceTaxableAmount><RPA_DiffTaxableAmount></DifferenceTaxableAmount>
+			<DifferenceTaxAmount><RPA_DiffTaxAmount></DifferenceTaxAmount>
+			<DifferenceTaxInclusiveAmount><RPA_DiffTaxInlcusiveAmount></DifferenceTaxInclusiveAmount>
+			<TaxCategory>
+				<Percent><RPA_TaxPercent></Percent>
+				<TaxScheme></TaxScheme>
+			</TaxCategory>
+		</TaxSubTotal>
+				<TaxSubTotal>
+			<TaxableAmount><RPA_TaxableAmount></TaxableAmount>
+			<TaxAmount><RPA_TaxAmount></TaxAmount>
+			<TaxInclusiveAmount><RPA_TaxInlcusiveAmount></TaxInclusiveAmount>
+			<AlreadyClaimedTaxableAmount><RPA_AlreadyClaimedTaxableAmount></AlreadyClaimedTaxableAmount>
+			<AlreadyClaimedTaxAmount><RPA_AlreadyClaimedTaxAmount></AlreadyClaimedTaxAmount>
+			<AlreadyClaimedTaxInclusiveAmount><RPA_AlreadyClaimedTaxInlcusiveAmount></AlreadyClaimedTaxInclusiveAmount>
+			<DifferenceTaxableAmount><RPA_DiffTaxableAmount></DifferenceTaxableAmount>
+			<DifferenceTaxAmount><RPA_DiffTaxAmount></DifferenceTaxAmount>
+			<DifferenceTaxInclusiveAmount><RPA_DiffTaxInlcusiveAmount></DifferenceTaxInclusiveAmount>
+			<TaxCategory>
+				<Percent><RPA_TaxPercent></Percent>
+				<TaxScheme></TaxScheme>
+			</TaxCategory>
+		</TaxSubTotal>
+			</TaxTotal>
+	<LegalMonetaryTotal>
+		<TaxExclusiveAmount><RPA_Total without tax></TaxExclusiveAmount>
+		<TaxInclusiveAmount><RPA_Amount Paid></TaxInclusiveAmount>
+		<AlreadyClaimedTaxExclusiveAmount><RPA_AlreadyPaidWithoutTax></AlreadyClaimedTaxExclusiveAmount>
+		<AlreadyClaimedTaxInclusiveAmount><RPA_AlreadyPaidWithTax></AlreadyClaimedTaxInclusiveAmount>
+		<DifferenceTaxExclusiveAmount><RPA_Total without tax></DifferenceTaxExclusiveAmount>
+		<DifferenceTaxInclusiveAmount><RPA_Amount Paid></DifferenceTaxInclusiveAmount>
+		<PayableRoundingAmount><RPA_Amount Rounding></PayableRoundingAmount>
+		<PaidDepositsAmount><RPA_PaidDepositAmount></PaidDepositsAmount>
+		<PayableAmount><RPA_Amount Paid></PayableAmount>
+	</LegalMonetaryTotal>
+	<PaymentMeans>
+		<Payment>
+			<PaidAmount><RPA_Amount due></PaidAmount>
+			<PaymentMeansCode><RPA_Terms></PaymentMeansCode>
+			<Details>
+				<PaymentDueDate><RPA_Due date></PaymentDueDate>
+				<ID><RPA_Account number></ID>
+				<BankCode><RPA_Bank code></BankCode>
+				<Name><RPA_BankName></Name>
+				<IBAN><RPA_IBAN></IBAN>
+				<BIC><RPA_BIC/SWIFT></BIC>
+				<VariableSymbol><RPA_Payment reference></VariableSymbol>
+				<ConstantSymbol><RPA_Constant symbol></ConstantSymbol>
+			</Details>
+		</Payment>
+	</PaymentMeans>
+</Invoice>
+
